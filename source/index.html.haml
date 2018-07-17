@@ -1,0 +1,91 @@
+%section{data: {"background" => "vendor/eth-reveal-theme/images/eth-sls-background.jpg", "background-size" => "100%", "background-position" => "bottom"}}
+  %h3 Dark-field imaging for hard X-ray grating interferometry: predictive models and applications
+
+%section
+  %h3 Goal
+  %p Feasibility and performance assessment of grating interferometry for general purpose applications
+  %h3 Outline
+  %ul
+    %li Talbot interferometry
+    %li Why high energy?
+    %li The edge-on geometry
+    %li Compton scattering and dark field
+    %li Quantitative dark-field imaging
+    %li Omnidirectional dark-field imaging
+
+%section
+  %section
+    %h3 The Talbot effect
+    \\(
+    D_j = \left(j - \frac{1}{2}\right) \frac{p_1^2}{4 \lambda}
+    \\)
+    .col-md-12
+      = image_tag "talbot-carpet.png", style: "width: 60%"
+
+  %section
+    %h3 The analyzer grating \(G_2\)
+    \\(
+    s(x) = a_{0} + a_{1} \cos\left(\frac{2 \pi}{p_2} x + \theta\right)
+    \\)
+    .col-md-12
+      = image_tag "phase-stepping.png", style: "width: 60%"
+
+  %section
+    %h3 Comparing the curves
+    \\(
+    s(x) = a_{0} + a_{1} \cos\left(\frac{2 \pi}{p_2} x + \theta\right)
+    \\)
+    %table
+      %thead
+        %tr
+          %th signal
+          %th definition
+      %tbody
+        %tr
+          %td transmission
+          %td \(A = a_{0,s} / a_{0,f}\)
+        %tr
+          %td differential phase
+          %td \(P = \theta_{s} - \theta_{f}\)
+        %tr
+          %td visibility
+          %td \(v = 2a_1 / a_0\)
+        %tr
+          %td visibility reduction
+          %td \(B = \frac{v_s}{v_f} = \frac{a_{1,s}}{a_{0,s}}\frac{a_{0,f}}{a_{1,f}}\)
+        %tr
+          %td log ratio
+          %td \(R = \frac{\log B}{\log A}\)
+
+  %section
+    %h3 General purpose applications
+    %ul
+      %li table top, incoherent source
+      %li energies above 100 keV
+
+  %section
+    %h3 Incoherent sources
+    %p a third grating \(G_0\) creates an array of individually coherent but mutually incoherent sources
+    .col-md-12
+      = image_tag "schematic.png", style: "width: 60%"
+
+  %section
+    %h3 Gratings for higher energy
+    %ul
+      %li for a constant setup length \(D_j = \frac{p_1^2}{2 \lambda} \Rightarrow p \propto 1/\sqrt{\energy}\)
+      %li for an efficient absorption \(\mu = 2k\beta \propto \energy^3\)
+    .col-md-12
+      = image_tag "grating-sem.png", style: "width: 40%"
+    %p aspect ratio \(r = 2h / p \propto \energy^{7/2}\)
+
+  %section
+    %h3 Manufacturing with very high aspect ratios
+    %ul
+      %li inconsistent structures
+      %li incomplete growth
+    .col-md-12
+      = image_tag "au-grating.png", style: "width:100%"
+
+  %section
+    %h3 The edge-on geometry
+    %p illuminating gratings from one side
