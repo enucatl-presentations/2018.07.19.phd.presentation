@@ -1,5 +1,5 @@
 # presentation
-https://enucatl-presentations.github.io/2018.03.06.progress.report/
+https://enucatl-presentations.github.io/2018.07.19.phd.presentation/
 
 git hook to push the compiled version to gh-pages
 -------------------------------------------------

@@ -1,21 +1,20 @@
 %section{data: {"background" => "vendor/eth-reveal-theme/images/eth-sls-background.jpg", "background-size" => "100%", "background-position" => "bottom"}}
-  %h3 Dark-field imaging for hard X-ray grating interferometry: predictive models and applications
+  %h4 Dark-field imaging for hard X-ray grating interferometry: predictive models and applications
 
 %section
-  %h3 Goal
+  %h4 Goal
   %p Feasibility and performance assessment of grating interferometry for general purpose applications
-  %h3 Outline
+  %h4 Outline
   %ul
     %li Talbot interferometry
     %li Why high energy?
     %li The edge-on geometry
-    %li Compton scattering and dark field
     %li Quantitative dark-field imaging
     %li Omnidirectional dark-field imaging
 
 %section
   %section
-    %h3 The Talbot effect
+    %h4 The Talbot effect
     \\(
     D_j = \left(j - \frac{1}{2}\right) \frac{p_1^2}{4 \lambda}
     \\)
@@ -23,7 +22,7 @@
       = image_tag "talbot-carpet.png", style: "width: 60%"
 
   %section
-    %h3 The analyzer grating \(G_2\)
+    %h4 The analyzer grating \(G_2\)
     \\(
     s(x) = a_{0} + a_{1} \cos\left(\frac{2 \pi}{p_2} x + \theta\right)
     \\)
@@ -31,7 +30,7 @@
       = image_tag "phase-stepping.png", style: "width: 60%"
 
   %section
-    %h3 Comparing the curves
+    %h4 Comparing the curves
     \\(
     s(x) = a_{0} + a_{1} \cos\left(\frac{2 \pi}{p_2} x + \theta\right)
     \\)
@@ -58,19 +57,19 @@
           %td \(R = \frac{\log B}{\log A}\)
 
   %section
-    %h3 General purpose applications
+    %h4 General purpose applications
     %ul
       %li table top, incoherent source
       %li energies above 100 keV
 
   %section
-    %h3 Incoherent sources
+    %h4 Incoherent sources
     %p a third grating \(G_0\) creates an array of individually coherent but mutually incoherent sources
     .col-md-12
       = image_tag "schematic.png", style: "width: 60%"
 
   %section
-    %h3 Gratings for higher energy
+    %h4 Gratings for higher energy
     %ul
       %li for a constant setup length \(D_j = \frac{p_1^2}{2 \lambda} \Rightarrow p \propto 1/\sqrt{\energy}\)
       %li for an efficient absorption \(\mu = 2k\beta \propto \energy^3\)
@@ -79,7 +78,7 @@
     %p aspect ratio \(r = 2h / p \propto \energy^{7/2}\)
 
   %section
-    %h3 Manufacturing with very high aspect ratios
+    %h4 Manufacturing with very high aspect ratios
     %ul
       %li inconsistent structures
       %li incomplete growth
@@ -87,5 +86,180 @@
       = image_tag "au-grating.png", style: "width:100%"
 
   %section
-    %h3 The edge-on geometry
+    %h4 The edge-on setup
     %p illuminating gratings from one side
+    .col-md-12
+      = image_tag "edgeon.png", style: "width:60%"
+
+  %section
+    %h4 The edge-on setup
+    %ul
+      %li design energy: 100/120 keV
+      %li absorption thickness: 800 μm
+
+  %section
+    %h4 The edge-on setup
+    %p first imaging results
+    .col-md-4
+      %p absorption
+      = image_tag "images_S00075_S00071-img0.png"
+    .col-md-4
+      %p differential phase
+      = image_tag "images_S00075_S00071-img1.png"
+    .col-md-4
+      %p dark field
+      = image_tag "images_S00075_S00071-img2.png"
+    .col-md-12
+      = image_tag "chip-overlay.png", style: "width:40%"
+
+%section
+  %section
+    %h4 Quantitative dark-field imaging
+
+  %section 
+    %h4 A two dimensional setup
+    %ul
+      %li design energy: 45 keV
+      %li CdTe prototype detector by Dectris Ltd.
+    .col-md-12
+      = image_tag "lung-setup.png", style: "width:60%"
+
+  %section
+    %h4 Quantitative study of microstructures
+    .col-md-12
+      %p Lynch et al., 2011 for a monochromatic source
+    .col-md-6
+      \\[
+      \\mu_B = \frac{3\pi}{\lambda^2}f |\Delta n|^2 d
+      \\begin{cases}
+      D' & \text{if } D' \leqslant 1\\[2ex]
+      \\!\begin{align}
+      & D' - \sqrt{D'^2 - 1}\\
+      & (1 + D'^{-2}/2) \\
+      & + (D'^{-1} + D'^{-3} / 4) \\
+      & \log\left(\frac{D' + \sqrt{D'^2 - 1}}{D' - \sqrt{D'^2 - 1}}\right)
+      \\end{align} & \text{otherwise}
+      \\end{cases}
+      \\]
+
+  %section
+    %h4 Quantitative study of microstructures
+    .col-md-12
+      %p Lynch et al., 2011 for a monochromatic source
+    .col-md-12
+      = tag :img, style: "width: 50%", src: "https://www.researchgate.net/profile/Vinay_Pai/publication/51563274/figure/fig4/AS:305732164571139@1449903636286/Fig-4.png"
+
+
+  %section
+    %h4 First trial on a polychromatic source: microspheres
+    %ul
+      %li monodisperse silica microspheres in 20% glycerol solution
+      %li incoherent sum of the dark-field response by Lynch et al. over the spectrum \(w(\energy)\)
+    %p
+      \\[
+      R(\energy) = \frac{\log B}{\log A} = \frac{\mu_d(\energy)}{2k\beta(\energy)}
+      \\]
+    %p
+      \\[
+      R = \sum_\energy w(\energy) R(\energy)
+      \\]
+
+  %section
+    %h4 First trial on a polychromatic source: microspheres
+    .col-md-12
+      = image_tag "summary.png", style: "width:75%"
+
+  %section
+    %h4 A complex sample: lungs
+    %ul
+      %li model the lung as a collection of spheres of different diameters (Kitchen et al. 2004);
+      %li determine the distribution of diameters with a high-resolution computed tomography;
+      %li calculate the expected dark-field response by summing over the different energies and diameters;
+      %li compare to the dark-field measured on the laboratory source radiography.
+
+  %section
+    %h4 High-resolution tomography at the TOMCAT beamline
+    %ul
+      %li 0.65 μm resolution
+      %li 1800 projections
+      %li reconstruction (gridrec algorithm)
+      %li segmentation
+    .col-md-12
+      = image_tag "segmentation.png", style: "width:75%"
+
+  %section
+    %h4 High-resolution tomography at the TOMCAT beamline
+    %ul
+      %li stitching
+    .col-md-12
+      = image_tag "0700.png", style: "width:75%"
+
+  %section
+    %h4 High-resolution tomography at the TOMCAT beamline
+    %ul
+      %li euclidean transformation = distance to closest wall
+    .col-md-12
+      = image_tag "KO202_DR_700.png", style: "width:75%"
+
+  %section
+    %h4 High-resolution tomography at the TOMCAT beamline
+    %ul
+      %li thickness map, fit the largest sphere fitting each empty space
+    .col-md-12
+      = image_tag "KO202_TM_700.png", style: "width:75%"
+
+  %section
+    %h4 High-resolution tomography at the TOMCAT beamline
+    %ul
+      %li distribution of diameters \(\rho(d)\)
+      %li 8 samples (fixed mouse lungs)
+    .col-md-12
+      = image_tag "size_pdf.png", style: "width:75%"
+
+  %section
+    %h4 Predicting dark-field values
+    %p incoherent sum over the spectrum and diameters
+    %p
+      \\(
+      \\mu_{B,\text{total}} = \sum_{d}\sum_{\energy} \mu_B(d, \energy; n, f)\rho(d)s(\energy)
+      \\)
+    .col-md-12
+      = image_tag "lung-radiography.png", style: "width:50%"
+
+  %section
+    %h4 Comparing predicted and measured values
+    .col-md-12
+      = image_tag "samples.png", style: "width:60%"
+
+%section
+  %section
+    %h4 Omnidirectional dark field on conventional sources
+    %p Technique designed by Kagias et al. 2016 on a synchrotron source
+    .col-md-12
+      = image_tag "synchrotron-design.png", style: "width:60%"
+
+  %section
+    %h4 Pinhole array of coherent sources
+    %p same idea as in Talbot-Lau interferometry
+    .col-md-6
+      = image_tag "schematic-with-arrows.png", style: "width:100%"
+    .col-md-6
+      %ul
+        %li L = 57 cm
+        %li D = 110 cm
+        %li design energy 30 keV
+        %li source 60 kVp
+        %li p = 2 μm, P = 300 μm
+
+  %section
+    %h4 Self image
+    %ul
+      %li The cell pattern is replicated at the detector plane thanks to the Talbot effect
+      %li Each cell becomes a pixel in the reconstruction
+    .col-md-12
+      = image_tag "visibility-omnidirectional.png", style: "width:60%"
+
+  %section
+    %h4 Following carbon fibers
+    .col-md-12
+      = image_tag "filtered.png", style: "width:60%"
