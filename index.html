@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset='utf-8'>
+<meta content='7th progress report' name='description'>
+<meta content='Matteo Abis' name='author'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="stylesheets/all.css" rel="stylesheet" />
+<link href="vendor/eth-reveal-theme/eth.css" rel="stylesheet" id="theme" />
+<script src="vendor/reveal/lib/js/head.min.js"></script>
+<script src="javascripts/reveal_print_pdf.js"></script>
+<!--[if lt IE 9]>
+<script src="vendor/reveal.js/lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body class='index'>
+<div class='reveal'>
+<img align='left' alt='ETH Logo' src='vendor/eth-reveal-theme/images/eth-logo.jpg' width='15%'>
+<img align='right' alt='PSI Logo' src='vendor/eth-reveal-theme/images/psi-logo.jpg' width='15%'>
+<div class='slides'>
+<section data-background-position='bottom' data-background-size='100%' data-background='vendor/eth-reveal-theme/images/eth-sls-background.jpg'>
+<h4>Dark-field imaging for hard X-ray grating interferometry: predictive models and applications</h4>
+</section>
+<section>
+<h4>Goal</h4>
+<p>Feasibility and performance assessment of grating interferometry for general purpose applications</p>
+<h4>Outline</h4>
+<ul>
+<li>Talbot interferometry</li>
+<li>Why high energy?</li>
+<li>The edge-on geometry</li>
+<li>Quantitative dark-field imaging</li>
+<li>Omnidirectional dark-field imaging</li>
+</ul>
+</section>
+<section>
+<section>
+<h4>The Talbot effect</h4>
+\(
+D_j = \left(j - \frac{1}{2}\right) \frac{p_1^2}{4 \lambda}
+\)
+<div class='col-md-12'>
+<img src="images/talbot-carpet.png" style="width: 60%" alt="Talbot carpet" />
+</div>
+</section>
+<section>
+<h4>The analyzer grating \(G_2\)</h4>
+\(
+s(x) = a_{0} + a_{1} \cos\left(\frac{2 \pi}{p_2} x + \theta\right)
+\)
+<div class='col-md-12'>
+<img src="images/phase-stepping.png" style="width: 60%" alt="Phase stepping" />
+</div>
+</section>
+<section>
+<h4>Comparing the curves</h4>
+\(
+s(x) = a_{0} + a_{1} \cos\left(\frac{2 \pi}{p_2} x + \theta\right)
+\)
+<table>
+<thead>
+<tr>
+<th>signal</th>
+<th>definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transmission</td>
+<td>\(A = a_{0,s} / a_{0,f}\)</td>
+</tr>
+<tr>
+<td>differential phase</td>
+<td>\(P = \theta_{s} - \theta_{f}\)</td>
+</tr>
+<tr>
+<td>visibility</td>
+<td>\(v = 2a_1 / a_0\)</td>
+</tr>
+<tr>
+<td>visibility reduction</td>
+<td>\(B = \frac{v_s}{v_f} = \frac{a_{1,s}}{a_{0,s}}\frac{a_{0,f}}{a_{1,f}}\)</td>
+</tr>
+<tr>
+<td>log ratio</td>
+<td>\(R = \frac{\log B}{\log A}\)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h4>General purpose applications</h4>
+<ul>
+<li>table top, incoherent source</li>
+<li>energies above 100 keV</li>
+</ul>
+</section>
+<section>
+<h4>Incoherent sources</h4>
+<p>a third grating \(G_0\) creates an array of individually coherent but mutually incoherent sources</p>
+<div class='col-md-12'>
+<img src="images/schematic.png" style="width: 60%" alt="Schematic" />
+</div>
+</section>
+<section>
+<h4>Gratings for higher energy</h4>
+<ul>
+<li>for a constant setup length \(D_j = \frac{p_1^2}{2 \lambda} \Rightarrow p \propto 1/\sqrt{\energy}\)</li>
+<li>for an efficient absorption \(\mu = 2k\beta \propto \energy^3\)</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/grating-sem.png" style="width: 40%" alt="Grating sem" />
+</div>
+<p>aspect ratio \(r = 2h / p \propto \energy^{7/2}\)</p>
+</section>
+<section>
+<h4>Manufacturing with very high aspect ratios</h4>
+<ul>
+<li>inconsistent structures</li>
+<li>incomplete growth</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/au-grating.png" style="width:100%" alt="Au grating" />
+</div>
+</section>
+<section>
+<h4>The edge-on setup</h4>
+<p>illuminating gratings from one side</p>
+<div class='col-md-12'>
+<img src="images/edgeon.png" style="width:60%" alt="Edgeon" />
+</div>
+</section>
+<section>
+<h4>The edge-on setup</h4>
+<ul>
+<li>design energy: 100/120 keV</li>
+<li>absorption thickness: 800 μm</li>
+</ul>
+</section>
+<section>
+<h4>The edge-on setup</h4>
+<p>first imaging results</p>
+<div class='col-md-4'>
+<p>absorption</p>
+<img src="images/images_S00075_S00071-img0.png" alt="Images s00075 s00071 img0" />
+</div>
+<div class='col-md-4'>
+<p>differential phase</p>
+<img src="images/images_S00075_S00071-img1.png" alt="Images s00075 s00071 img1" />
+</div>
+<div class='col-md-4'>
+<p>dark field</p>
+<img src="images/images_S00075_S00071-img2.png" alt="Images s00075 s00071 img2" />
+</div>
+<div class='col-md-12'>
+<img src="images/chip-overlay.png" style="width:40%" alt="Chip overlay" />
+</div>
+</section>
+</section>
+<section>
+<section>
+<h4>Quantitative dark-field imaging</h4>
+</section>
+<section>
+<h4>A two dimensional setup</h4>
+<ul>
+<li>design energy: 45 keV</li>
+<li>CdTe prototype detector by Dectris Ltd.</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/lung-setup.png" style="width:60%" alt="Lung setup" />
+</div>
+</section>
+<section>
+<h4>Quantitative study of microstructures</h4>
+<div class='col-md-12'>
+<p>Lynch et al., 2011 for a monochromatic source</p>
+</div>
+<div class='col-md-6'>
+\[
+\mu_B = \frac{3\pi}{\lambda^2}f |\Delta n|^2 d
+\begin{cases}
+D' & \text{if } D' \leqslant 1\\[2ex]
+\!\begin{align}
+D' - \sqrt{D'^2 - 1}\\
+(1 + D'^{-2}/2) \\
++ (D'^{-1} + D'^{-3} / 4) \\
+\log\left(\frac{D' + \sqrt{D'^2 - 1}}{D' - \sqrt{D'^2 - 1}}\right)
+\end{align} & \text{otherwise}
+\end{cases}
+\]
+</div>
+</section>
+<section>
+<h4>Quantitative study of microstructures</h4>
+<div class='col-md-12'>
+<p>Lynch et al., 2011 for a monochromatic source</p>
+</div>
+<div class='col-md-12'>
+<img style="width: 50%" src="https://www.researchgate.net/profile/Vinay_Pai/publication/51563274/figure/fig4/AS:305732164571139@1449903636286/Fig-4.png" />
+</div>
+</section>
+<section>
+<h4>First trial on a polychromatic source: microspheres</h4>
+<ul>
+<li>monodisperse silica microspheres in 20% glycerol solution</li>
+<li>incoherent sum of the dark-field response by Lynch et al. over the spectrum \(w(\energy)\)</li>
+</ul>
+<p>
+\[
+R(\energy) = \frac{\log B}{\log A} = \frac{\mu_d(\energy)}{2k\beta(\energy)}
+\]
+</p>
+<p>
+\[
+R = \sum_\energy w(\energy) R(\energy)
+\]
+</p>
+</section>
+<section>
+<h4>First trial on a polychromatic source: microspheres</h4>
+<div class='col-md-12'>
+<img src="images/summary.png" style="width:75%" alt="Summary" />
+</div>
+</section>
+<section>
+<h4>A complex sample: lungs</h4>
+<ul>
+<li>model the lung as a collection of spheres of different diameters (Kitchen et al. 2004);</li>
+<li>determine the distribution of diameters with a high-resolution computed tomography;</li>
+<li>calculate the expected dark-field response by summing over the different energies and diameters;</li>
+<li>compare to the dark-field measured on the laboratory source radiography.</li>
+</ul>
+</section>
+<section>
+<h4>High-resolution tomography at the TOMCAT beamline</h4>
+<ul>
+<li>0.65 μm resolution</li>
+<li>1800 projections</li>
+<li>reconstruction (gridrec algorithm)</li>
+<li>segmentation</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/segmentation.png" style="width:75%" alt="Segmentation" />
+</div>
+</section>
+<section>
+<h4>High-resolution tomography at the TOMCAT beamline</h4>
+<ul>
+<li>stitching</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/0700.png" style="width:75%" alt="0700" />
+</div>
+</section>
+<section>
+<h4>High-resolution tomography at the TOMCAT beamline</h4>
+<ul>
+<li>euclidean transformation = distance to closest wall</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/KO202_DR_700.png" style="width:75%" alt="Ko202 dr 700" />
+</div>
+</section>
+<section>
+<h4>High-resolution tomography at the TOMCAT beamline</h4>
+<ul>
+<li>thickness map, fit the largest sphere fitting each empty space</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/KO202_TM_700.png" style="width:75%" alt="Ko202 tm 700" />
+</div>
+</section>
+<section>
+<h4>High-resolution tomography at the TOMCAT beamline</h4>
+<ul>
+<li>distribution of diameters \(\rho(d)\)</li>
+<li>8 samples (fixed mouse lungs)</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/size_pdf.png" style="width:75%" alt="Size pdf" />
+</div>
+</section>
+<section>
+<h4>Predicting dark-field values</h4>
+<p>incoherent sum over the spectrum and diameters</p>
+<p>
+\(
+\mu_{B,\text{total}} = \sum_{d}\sum_{\energy} \mu_B(d, \energy; n, f)\rho(d)s(\energy)
+\)
+</p>
+<div class='col-md-12'>
+<img src="images/lung-radiography.png" style="width:50%" alt="Lung radiography" />
+</div>
+</section>
+<section>
+<h4>Comparing predicted and measured values</h4>
+<div class='col-md-12'>
+<img src="images/samples.png" style="width:60%" alt="Samples" />
+</div>
+</section>
+</section>
+<section>
+<section>
+<h4>Omnidirectional dark field on conventional sources</h4>
+<p>Technique designed by Kagias et al. 2016 on a synchrotron source</p>
+<div class='col-md-12'>
+<img src="images/synchrotron-design.png" style="width:60%" alt="Synchrotron design" />
+</div>
+</section>
+<section>
+<h4>Pinhole array of coherent sources</h4>
+<p>same idea as in Talbot-Lau interferometry</p>
+<div class='col-md-6'>
+<img src="images/schematic-with-arrows.png" style="width:100%" alt="Schematic with arrows" />
+</div>
+<div class='col-md-6'>
+<ul>
+<li>L = 57 cm</li>
+<li>D = 110 cm</li>
+<li>design energy 30 keV</li>
+<li>source 60 kVp</li>
+<li>p = 2 μm, P = 300 μm</li>
+</ul>
+</div>
+</section>
+<section>
+<h4>Self image</h4>
+<ul>
+<li>The cell pattern is replicated at the detector plane thanks to the Talbot effect</li>
+<li>Each cell becomes a pixel in the reconstruction</li>
+</ul>
+<div class='col-md-12'>
+<img src="images/visibility-omnidirectional.png" style="width:60%" alt="Visibility omnidirectional" />
+</div>
+</section>
+<section>
+<h4>Following carbon fibers</h4>
+<div class='col-md-12'>
+<img src="images/filtered.png" style="width:60%" alt="Filtered" />
+</div>
+</section>
+</section>
+
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="javascripts/all.js"></script>
+</body>
+</html>
